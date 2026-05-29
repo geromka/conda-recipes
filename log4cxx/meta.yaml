@@ -24,6 +24,10 @@ requirements:
     - {{ compiler('c') }}
     - cmake
     - make  # [unix]
+    - zip  # [linux]
+    - m2-sed  # [win]
+    - m2-zip  # [win]
+    - m2-gzip  # [win]
   host:
     - apr
   run:
