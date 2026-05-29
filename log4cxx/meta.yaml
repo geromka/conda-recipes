@@ -11,7 +11,7 @@ source:
   #url: http://archive.apache.org/dist/logging/{{ name }}/{{ version }}/apache-{{ name }}-{{ version }}.tar.gz
   #sha256: b943ff170393e4ce381ab4c4914396127bf4d44fb8bd1f0e5ef8453f3c4d364c
   patches:
-    - patches/fix_fmt_v12.patch
+    - patches/fix_fmt_v12.patch # [unix]
 
 build:
   number: 0
