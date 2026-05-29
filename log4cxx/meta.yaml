@@ -29,8 +29,12 @@ requirements:
     - m2-zip  # [win]
     - m2-gzip  # [win]
   host:
+    - expat
     - apr
+    - fmt
+    - libxcrypt  # [linux]
   run:
+    - expat
     - apr
     - libaprutil
     - libapr
