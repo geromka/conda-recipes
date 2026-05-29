@@ -1,0 +1,37 @@
+{% set name = "log4cxx-demo" %}
+{% set version = "0.1.0" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  path: src
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+    - {{ compiler('c') }}
+    - cmake
+    - make  # [unix]
+  host:
+    - log4cxx
+  run:
+    - log4cxx
+
+test:
+  commands:
+    - log4cxx-demo  # [unix]
+    - log4cxx-demo.exe  # [win]
+
+about:
+  home: https://github.com/geromka/conda-recipes
+  license: Apache-2.0
+  summary: Demo application showcasing log4cxx library usage.
+
+extra:
+  recipe-maintainers:
+    - geromka
