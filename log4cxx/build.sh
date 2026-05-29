@@ -10,6 +10,7 @@ mkdir build
 cd build
 
 cmake ${CMAKE_ARGS} \
+  -DBUILD_TESTING=OFF \
   ..
 
 make -j ${CPU_COUNT}
