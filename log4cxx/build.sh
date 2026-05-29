@@ -1,0 +1,16 @@
+#!/bin/bash
+# Get an updated config.sub and config.guess (if available)
+if [ -d "$BUILD_PREFIX/share/gnuconfig" ]; then
+    cp $BUILD_PREFIX/share/gnuconfig/config.* .
+fi
+
+set -ex
+
+mkdir build
+cd build
+
+cmake ${CMAKE_ARGS} \
+  ..
+
+make -j ${CPU_COUNT}
+make install
