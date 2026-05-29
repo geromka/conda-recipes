@@ -19,6 +19,7 @@ requirements:
     - make  # [unix]
   host:
     - log4cxx
+    - fmt
   run:
     - log4cxx
 
