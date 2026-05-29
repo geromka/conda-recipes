@@ -20,6 +20,7 @@ requirements:
   host:
     - log4cxx
     - fmt
+    - libxcrypt  # [linux]
   run:
     - log4cxx
 
