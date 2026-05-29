@@ -6,6 +6,8 @@ fi
 
 set -ex
 
+export LDFLAGS="${LDFLAGS} -lcrypt"
+
 mkdir build
 cd build
 
